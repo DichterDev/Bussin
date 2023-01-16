@@ -8,7 +8,8 @@ import AddModules from '../../03_Buttons/01_Add_Modules/AddModules';
 import AddButtonMenu from '../../04_Menu\'s/01_AddButtonMenu/AddButtonMenu';
 
 export default function Home() {
-  const [showComponent, setShowComponent] = useState(false);
+  const [showTracking, setShowTracking] = useState(false)
+  const [showFahrplan, setShowFahrplan] = useState(false)
 
   return (
     <MenuProvider>
@@ -18,11 +19,13 @@ export default function Home() {
             </View>
             <ScrollView>
               <View className="">
-                {showComponent && <AddButtonMenu onPress={() => setShowComponent(showComponent)} />}
+                {showTracking && <Tracking />}
+                {showFahrplan && <Fahrplan />}
               </View>
               <View className="items-center justify-center">
                 <AddModules
-                  onPress={() => setShowComponent(!showComponent)}
+                  AddTracking={(setShowTracking(!showTracking))}
+                  AddFahrplan={(setShowFahrplan(!showFahrplan))}
                 />          
               </View>
             </ScrollView>
