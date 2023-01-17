@@ -20,12 +20,12 @@ export default function Home() {
   return (
     <MenuProvider>
         <View className="flex-1 flex-col">
-            <View className="bg-green-700 items-center pt-8 pb-2">
-              <Text>Header</Text>
+            <View className="bg-main-color items-center pt-8 pb-2">
+              <Text className="text-font-color text-lg font-bold">Bussin</Text>
             </View>
             <ScrollView>
               <View className="">
-                {!showTracking && <Tracking DelComponent={() => setShowTracking(!showTracking)}/>}
+                {showTracking && <Tracking DelComponent={() => setShowTracking(!showTracking)}/>}
                 {!showFahrplan && <Fahrplan DelComponent={() => setShowFahrplan(!showFahrplan)}/>}
               </View>
               <View className="items-center justify-center">
