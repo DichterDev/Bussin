@@ -10,8 +10,9 @@ export default class Tracking extends Component {
       <View className="mt-2">
         <View className="bg-red-500 p-2 flex-row justify-between">
             <Text>Tracking</Text>
-            <DelBtn 
-              onPress={this.props.delComponent}
+            <DelBtn
+              MenuOption='Tracking'
+              DelComponent={this.props.DelComponent}
             />
         </View>
         <View className="bg-blue-500 p-2">
