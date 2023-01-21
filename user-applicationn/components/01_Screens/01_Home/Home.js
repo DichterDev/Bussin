@@ -25,8 +25,8 @@ export default function Home() {
             </View>
             <ScrollView>
               <View className="">
-                {showTracking && <Tracking DelComponent={() => setShowTracking(!showTracking)}/>}
-                {!showFahrplan && <Fahrplan DelComponent={() => setShowFahrplan(!showFahrplan)}/>}
+                {!showTracking && <Tracking DelComponent={() => setShowTracking(!showTracking)}/>}
+                {showFahrplan && <Fahrplan DelComponent={() => setShowFahrplan(!showFahrplan)}/>}
               </View>
               <View className="items-center justify-center">
                 <AddModules 
