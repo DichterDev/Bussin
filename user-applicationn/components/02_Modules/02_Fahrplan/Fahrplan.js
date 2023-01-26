@@ -19,13 +19,13 @@ export default class Fahrplan extends Component {
               DelComponent={this.props.DelComponent}
             />
         </View>
-          <View className="flex-row justify-left bg-secondary-color p-2 content-evenly">
-            <View className="items-center my-4 absolute top-2">
+          <View className="flex-row justify-left bg-secondary-color p-2">
+            <View className="items-center">
               <MaterialCommunityIcons name="alpha-a-circle-outline" size={32} color="black" />
               <FontAwesome name="long-arrow-down" size={32} color="black" />
               <MaterialCommunityIcons name="alpha-b-circle-outline" size={32} color="black" />
             </View>
-            <View className="mx-4 absolute">
+            <View className="">
               <Input
                 Text="Start"
               />
@@ -33,7 +33,7 @@ export default class Fahrplan extends Component {
                 Text="Ziel"
               />
             </View>
-            <View className="mt-20 ml-4 absolute">
+            <View className="">
               <Suche 
                 Text="Suche"        
               />
