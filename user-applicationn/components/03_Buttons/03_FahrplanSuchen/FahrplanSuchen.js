@@ -5,7 +5,7 @@ export default class FahrplanSuchen extends Component {
   render() {
     return (
       <TouchableOpacity className="bg-main-color p-2 rounded-lg" onClick={this.props.onPress}>
-        <Text>{this.props.Text}</Text>
+        <Text className="text-font-color">{this.props.Text}</Text>
       </TouchableOpacity>
     )
   }

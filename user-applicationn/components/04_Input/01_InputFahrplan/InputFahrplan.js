@@ -4,8 +4,9 @@ import React, { Component } from 'react'
 export default class InputFahrplan extends Component {
   render() {
     return (
-      <View className="border-b w-48">
+      <View className="border-b border-l border-grey- w-max">
         <TextInput
+          className="text-lg"
           placeholder={this.props.Text}
         />
       </View>

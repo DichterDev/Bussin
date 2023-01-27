@@ -4,7 +4,7 @@ import Test from './components/01_Screens/03_Test/Test'
 export default function App() {
   return (
     <>
-      <Test />
+      <Home />
     </>
   );
 }

@@ -19,26 +19,47 @@ export default class Fahrplan extends Component {
               DelComponent={this.props.DelComponent}
             />
         </View>
-          <View className="flex-row justify-left bg-secondary-color p-2">
-            <View className="items-center">
-              <MaterialCommunityIcons name="alpha-a-circle-outline" size={32} color="black" />
-              <FontAwesome name="long-arrow-down" size={32} color="black" />
-              <MaterialCommunityIcons name="alpha-b-circle-outline" size={32} color="black" />
+        <View className="bg-secondary-color flex-row justify-between items-center">
+          <View className="flex-column items-center">
+            <View className="p-2"> 
+                <MaterialCommunityIcons name="alpha-a-circle-outline" size={32} color="black" />
             </View>
-            <View className="">
+            <View className=""> 
+              <FontAwesome name="long-arrow-down" size={32} color="black" />
+            </View>
+            <View className="p-2">
+              <MaterialCommunityIcons name="alpha-b-circle-outline" size={32} color="black" /> 
+            </View>
+          </View>
+          <View className="flex-column w-3/5">
+            <View className=""> 
               <Input
                 Text="Start"
               />
+            </View>
+            <View className="p-6"> 
+              {/*Placeholder*/}
+            </View>
+            <View className=""> 
               <Input
                 Text="Ziel"
               />
             </View>
-            <View className="">
+          </View>
+          <View className="flex-column">
+            <View className="p-5"> 
+              {/*Placeholder*/}
+            </View>
+            <View className="p-5"> 
+              {/*Placeholder*/}
+            </View>
+            <View className="pr-4"> 
               <Suche 
                 Text="Suche"        
               />
             </View>
           </View>
+        </View>
       </View>
     )
   }
