@@ -6,7 +6,7 @@ export default class InputFahrplan extends Component {
     return (
       <View className="border-b border-l border-grey- w-max">
         <TextInput
-          className="text-lg"
+          className="ml-2 text-lg"
           placeholder={this.props.Text}
         />
       </View>
