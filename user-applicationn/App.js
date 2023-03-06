@@ -6,7 +6,7 @@ import Fahrplan from './components/01_Screens/03_Fahrplan/Fahrplan';
 export default function App() {
   return (
     <>
-      <Test2/>
+      <Home/>
     </>
   );
 }

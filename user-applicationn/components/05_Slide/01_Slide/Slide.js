@@ -7,10 +7,10 @@ constructor(props) {
     super(props);
     this.state = {
         categes: [
-        { key: 1, cat_id: '1', cat_name: props.PointOne, backgroundcolor: '#EBEBEB' },
-        { key: 2, cat_id: '2', cat_name: props.PointTwo, backgroundcolor: '#CCCCCC' },
-        { key: 3, cat_id: '3', cat_name: props.PointThree, backgroundcolor: '#CCCCCC' },
-        { key: 4, cat_id: '4', cat_name: props.PointFour, backgroundcolor: '#CCCCCC' },
+        { cat_id: '1', cat_name: props.PointOne, backgroundcolor: '#EBEBEB', function: props.FunctionOne},
+        { cat_id: '2', cat_name: props.PointTwo, backgroundcolor: '#CCCCCC', function: props.FunctionTwo},
+        { cat_id: '3', cat_name: props.PointThree, backgroundcolor: '#CCCCCC', function: props.FunctionThree},
+        { cat_id: '4', cat_name: props.PointFour, backgroundcolor: '#CCCCCC', function: props.FunctionFour},
         ],
         change: false,
     };
@@ -33,15 +33,14 @@ constructor(props) {
               categes: categes,
             });
           }
-          key = this.state.categes[x].key;
         }
       };
   render() {
     return (
-        <View className="flex-1 justify-center items-center">
-            <View className="flex-row bg-secondary-color rounded-lg w-3/4 justify-between">
-              {this.state.categes.map((item, key) => (
-                  <TouchableOpacity style={{backgroundColor: item.backgroundcolor,}} onPress={() => this.changeBackground(item, key)} className="bg-font-color py-2 px-1 m-1 rounded-lg">
+        <View className="flex p-2">
+            <View className="flex-row bg-secondary-color rounded-lg w-max justify-between">
+              {this.state.categes.map((item) => (
+                  <TouchableOpacity key={item.cat_id} style={{backgroundColor: item.backgroundcolor,}} onPress={() => {this.changeBackground(item); item.function;}} className="bg-font-color p-2 m-1 rounded-lg">
                       <Text>{item.cat_name}</Text>
                   </TouchableOpacity>
               ))}
