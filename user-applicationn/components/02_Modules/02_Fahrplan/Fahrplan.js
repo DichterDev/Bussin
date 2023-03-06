@@ -15,7 +15,7 @@ export default class Fahrplan extends Component {
         <View className="bg-main-color p-2 flex-row justify-between">
             <Text className="text-font-color">Fahrplan</Text>
             <DelBtn
-              Visibility={this.props.Visibility}
+              Visibillity={this.props.Visibillity}
               MenuOption='Fahrplan'
               DelComponent={this.props.DelComponent}
             />

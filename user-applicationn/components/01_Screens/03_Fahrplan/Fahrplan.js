@@ -30,7 +30,7 @@ export default function Fahrplan() {
         <Text className="text-font-color text-lg font-bold">Bussin</Text>
       </SafeAreaView>
       <FahplranModule
-        Visibility={false}
+        Visibillity={true}
       />
       <Slide
         PointOne="Orte"

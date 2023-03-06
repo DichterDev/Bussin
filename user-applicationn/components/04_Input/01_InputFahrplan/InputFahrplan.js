@@ -8,16 +8,12 @@ export default function InputFahrplan(props) {
 
   return (
     <>
-      <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-      >
+      <Modal animationType="slide" transparent={true} visible={modalVisible}>
         <View className="bg-font-color h-full">
           <SafeAreaView className="flex-row bg-main-color">
             <TextInput
               className="bg-font-color rounded-sm p-2 w-2/3 h-8 m-2"
-              placeholder='Moin Servus Moin'
+              placeholder="Haltestelle eingeben..."
 
             />
             <TouchableOpacity
