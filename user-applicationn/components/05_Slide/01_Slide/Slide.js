@@ -35,12 +35,14 @@ constructor(props) {
           }
         }
       };
+
+    
   render() {
     return (
         <View className="flex p-2">
             <View className="flex-row bg-secondary-color rounded-lg w-max justify-between">
               {this.state.categes.map((item) => (
-                  <TouchableOpacity key={item.cat_id} style={{backgroundColor: item.backgroundcolor,}} onPress={() => {this.changeBackground(item); item.function;}} className="bg-font-color p-2 m-1 rounded-lg">
+                  <TouchableOpacity key={item.cat_id} style={{backgroundColor: item.backgroundcolor,}} onPress={() => {this.changeBackground(item)}} className="bg-font-color p-2 m-1 rounded-lg">
                       <Text>{item.cat_name}</Text>
                   </TouchableOpacity>
               ))}

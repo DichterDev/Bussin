@@ -32,7 +32,7 @@ export default class Fahrplan extends Component {
               <MaterialCommunityIcons name="alpha-b-circle-outline" size={32} color="black" /> 
             </View>
           </View>
-          <View className="flex-column w-2/4 justify-evenly">
+          <View className="w-2/4 justify-evenly">
               <Input
                 Text="Start"
               /> 
