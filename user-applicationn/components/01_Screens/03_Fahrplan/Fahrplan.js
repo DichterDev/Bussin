@@ -10,19 +10,7 @@ import VonNach from '../03_Fahrplan/01_Screens/Von-Nach'
 import Touch from '../03_Fahrplan/01_Screens/Touch'
 import Karte from '../03_Fahrplan/01_Screens/Karte'
 
-const components = {
-  'Screen1': Orte,
-  'Screen2': VonNach,
-  'Screen3': Touch,
-  'Screen4': Karte,
-}
-
 export default function Fahrplan() {
-
-  const [showOrte, setShowOrte] = useState('Screen1')
-  const [showTouch, setShowTouch] = useState('Screen2')
-  const [showKarte, setShowKarte] = useState('Screen3')
-  const [showVonNach, setShowVonNach] = useState('Screen4')
 
   return (
     <>
@@ -34,19 +22,11 @@ export default function Fahrplan() {
       />
       <Slide
         PointOne="Orte"
-        FunctionOne={() => setShowOrte(!showOrte)}
         PointTwo="Von-Nach"
-        FunctionTwo={() => setShowVonNach(!showVonNach)}
         PointThree="Touch"
-        FunctionThree={() => setShowTouch(!showTouch)}   
         PointFour="Karte"
-        FunctionFour={() => setShowKarte(!showKarte)}
       />
       <ScrollView className="">
-        {showOrte && <Orte/>}
-        {!showTouch && <VonNach/>}
-        {!showKarte && <Touch/>}
-        {!showVonNach && <Karte/>}
       </ScrollView>
     </>
   );
