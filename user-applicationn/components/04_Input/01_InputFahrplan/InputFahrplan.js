@@ -2,6 +2,7 @@ import { Text, View, TextInput, TouchableOpacity, Modal, SafeAreaView, ScrollVie
 import { useState } from 'react';
 import React, { Component } from 'react'
 
+import data from '../../02_Modules/02_Fahrplan/01_Items/data.json'
 import ItemTemplate from '../../02_Modules/02_Fahrplan/01_Items/ItemTemplate'
 
 export default function InputFahrplan(props) {
@@ -24,26 +25,14 @@ export default function InputFahrplan(props) {
             </TouchableOpacity>
           </SafeAreaView>
           <ScrollView>
-            <ItemTemplate
-              Icon="Bahnhof"
-              Haltestelle="Dornbirn Schoren Bahnhof"
-              Entfernung="2 km"            
-            />
-            <ItemTemplate
-              Icon="Haltestelle"
-              Haltestelle="Dornbirn Schoren Bahnhof"
-              Entfernung="2 km"            
-            />
-            <ItemTemplate
-              Icon="Adresse"
-              Haltestelle="Höchsterstraße 73"
-              Entfernung="300 m"            
-            />
-            <ItemTemplate
-              Icon="Undefined"
-              Haltestelle="Undefined"
-              Entfernung="0 m"            
-            />
+            {Object.values(data).map((id) => (
+              <ItemTemplate
+                key={id['id']}
+                Icon={id['typeStr']}
+                Name={id['name']}
+                Entfernung={id['distance'] + ' km'}            
+              />
+            ))}
           </ScrollView>
         </View>
       </Modal>
