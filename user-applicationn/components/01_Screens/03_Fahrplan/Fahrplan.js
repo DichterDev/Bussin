@@ -5,11 +5,6 @@ import { MenuProvider } from 'react-native-popup-menu';
 import FahplranModule from '../../02_Modules/02_Fahrplan/Fahrplan'
 import Slide from '../../05_Slide/01_Slide/Slide'
 
-import Orte from '../03_Fahrplan/01_Screens/Orte'
-import VonNach from '../03_Fahrplan/01_Screens/Von-Nach'
-import Touch from '../03_Fahrplan/01_Screens/Touch'
-import Karte from '../03_Fahrplan/01_Screens/Karte'
-
 export default function Fahrplan() {
 
   return (

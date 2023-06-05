@@ -21,7 +21,7 @@ export default function Home() {
             </SafeAreaView>
             <ScrollView>
               <View className="mt-2">
-                {showFahrplan && <Fahrplan DelComponent={() => setShowFahrplan(!showFahrplan)}/>}
+                {!showFahrplan && <Fahrplan DelComponent={() => setShowFahrplan(!showFahrplan)}/>}
                 {!showTracking && <Tracking DelComponent={() => setShowTracking(!showTracking)}/>}
               </View>
               <View className="items-center justify-center">

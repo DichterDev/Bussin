@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "meta": "Vorarlberg",
+        "nummer": "161",
+        "richtung": "Dornbirn Bahnhof",
+        "typeStr": "Bus"
+    },
+    {
+        "id": 1,
+        "meta": "Vorarlberg",
+        "nummer": "161",
+        "richtung": "Lustenau Bahnhof-Bundestraße",
+        "typeStr": "Bus"
+    },
+    {
+        "id": 2,
+        "meta": "Vorarlberg",
+        "nummer": "S3",
+        "richtung": "St. Margrethen",
+        "typeStr": "Zug"
+    },
+    {
+        "id": 3,
+        "meta": "Vorarlberg",
+        "nummer": "S3",
+        "richtung": "Bregenz Hafen",
+        "typeStr": "Zug"
+    }
+]
