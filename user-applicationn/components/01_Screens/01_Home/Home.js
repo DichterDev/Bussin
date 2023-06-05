@@ -1,14 +1,22 @@
 import { Text, View, ScrollView, SafeAreaView} from 'react-native'
 import { useState } from 'react';
 import { MenuProvider } from 'react-native-popup-menu';
+import { useNavigation } from '@react-navigation/native';
 
 import Tracking from '../../02_Modules/01_Tracking/Tracking'
 import Fahrplan from '../../02_Modules/02_Fahrplan/Fahrplan'
 import AddModules from '../../03_Buttons/01_Add_Modules/AddModules';
 import GlobalStyles from '../../../GlobalStyles';
+import react, { useLayoutEffect } from 'react';
 
 export default function Home() {
+  const navigation = useNavigation(); 
   
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, [])
 
   const [showTracking, setShowTracking] = useState('Module1')
   const [showFahrplan, setShowFahrplan] = useState('Module2')
@@ -21,8 +29,8 @@ export default function Home() {
             </SafeAreaView>
             <ScrollView>
               <View className="mt-2">
-                {!showFahrplan && <Fahrplan DelComponent={() => setShowFahrplan(!showFahrplan)}/>}
-                {!showTracking && <Tracking DelComponent={() => setShowTracking(!showTracking)}/>}
+                {showFahrplan && <Fahrplan DelComponent={() => setShowFahrplan(!showFahrplan)}/>}
+                {showTracking && <Tracking DelComponent={() => setShowTracking(!showTracking)}/>}
               </View>
               <View className="items-center justify-center">
                 <AddModules 

@@ -11,7 +11,7 @@ import Suche from '../../03_Buttons/03_FahrplanSuchen/FahrplanSuchen'
 export default class Fahrplan extends Component {
   render() {
     return (
-      <View>
+      <View className="pb-2">
         <View className="bg-main-color p-2 flex-row justify-between">
             <Text className="text-font-color">Fahrplan</Text>
             <DelBtn
