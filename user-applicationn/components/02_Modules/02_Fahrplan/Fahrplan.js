@@ -11,15 +11,16 @@ import Suche from '../../03_Buttons/03_FahrplanSuchen/FahrplanSuchen'
 export default class Fahrplan extends Component {
   render() {
     return (
-      <View className="mt-2">
+      <View>
         <View className="bg-main-color p-2 flex-row justify-between">
             <Text className="text-font-color">Fahrplan</Text>
-            <DelBtn 
+            <DelBtn
+              Visibillity={this.props.Visibillity}
               MenuOption='Fahrplan'
               DelComponent={this.props.DelComponent}
             />
         </View>
-        <View className="bg-secondary-color flex-row justify-between items-center">
+        <View className="bg-secondary-color flex-row justify-between">
           <View className="flex-column items-center">
             <View className="p-2"> 
                 <MaterialCommunityIcons name="alpha-a-circle-outline" size={32} color="black" />
@@ -31,33 +32,18 @@ export default class Fahrplan extends Component {
               <MaterialCommunityIcons name="alpha-b-circle-outline" size={32} color="black" /> 
             </View>
           </View>
-          <View className="flex-column w-3/5">
-            <View className=""> 
+          <View className="w-2/4 justify-evenly">
               <Input
                 Text="Start"
-              />
-            </View>
-            <View className="p-6"> 
-              {/*Placeholder*/}
-            </View>
-            <View className=""> 
+              /> 
               <Input
                 Text="Ziel"
               />
-            </View>
           </View>
-          <View className="flex-column">
-            <View className="p-5"> 
-              {/*Placeholder*/}
-            </View>
-            <View className="p-5"> 
-              {/*Placeholder*/}
-            </View>
-            <View className="pr-4"> 
+          <View className="flex-column justify-end">
               <Suche 
                 Text="Suche"        
               />
-            </View>
           </View>
         </View>
       </View>

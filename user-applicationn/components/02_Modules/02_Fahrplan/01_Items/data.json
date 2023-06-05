@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "distance": 2,
+        "latitude": 47417261,
+        "longitude": 97362207,
+        "meta": "Vorarlberg",
+        "name": "Dornbirn Schoren",
+        "typeStr": "Haltestelle"
+    },
+    {
+        "id": 2,
+        "distance": 19,
+        "latitude": 47450436,
+        "longitude": 96643497,
+        "meta": "Vorarlberg",
+        "name": "Lustenau Bahnhof",
+        "typeStr": "Bahnhof"
+    },
+    {
+        "id": 3,
+        "distance": 15,
+        "latitude": 47450436,
+        "longitude": 96643497,
+        "meta": "Vorarlberg",
+        "name": "Lustenau Blauerplatz",
+        "typeStr": "Adresse"
+    },
+    {
+        "id": 4,
+        "distance": 0,
+        "latitude": "Undefined",
+        "longitude": "Undefined",
+        "meta": "Vorarlberg",
+        "name": "Undefined",
+        "typeStr": "Undefined"
+    }
+]
